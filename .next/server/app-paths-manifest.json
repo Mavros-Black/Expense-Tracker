@@ -1,0 +1,10 @@
+{
+  "/transactions/page": "app/transactions/page.js",
+  "/invoices/page": "app/invoices/page.js",
+  "/rules/page": "app/rules/page.js",
+  "/dashboard/page": "app/dashboard/page.js",
+  "/settings/page": "app/settings/page.js",
+  "/api/gmail/sync/route": "app/api/gmail/sync/route.js",
+  "/api/llm/parse/route": "app/api/llm/parse/route.js",
+  "/api/transactions/route": "app/api/transactions/route.js"
+}
