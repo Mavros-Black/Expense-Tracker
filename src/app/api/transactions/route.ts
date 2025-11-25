@@ -84,7 +84,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: "amount (number) and date are required" }, { status: 400 });
   }
 
-  let finalCategory = category;
+  let finalCategory: string | null = category ?? null;
   if (!finalCategory) {
     finalCategory = await inferCategoryFromRules(user.id, vendor ?? null, raw_text ?? "");
   }
@@ -98,7 +98,7 @@ export async function POST(request: NextRequest) {
       currency: currency ?? "USD",
       vendor: vendor ?? null,
       date,
-      category: finalCategory,
+      category: finalCategory ?? null,
       confidence_score: confidence_score ?? 1,
       raw_text: raw_text ?? null
     })
